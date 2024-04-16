@@ -2,7 +2,6 @@ const express = require("express");
 const cors = require("cors");
 // const Book = require("./models/book");
 const Nat_Hist = require("./models/Natural_History");
-const PORT = process.env.PORT || 8000;
 const nat_hist_routes = require("./router/nat_hist_router");
 const user_routes = require("./router/user_router"); // new
 const config = require("./config/db_config");
@@ -55,5 +54,7 @@ app.get("/", function (req, res) {
             res.status(500).json({ error: "Internal Server Error" });
         });
 });
+
+const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
