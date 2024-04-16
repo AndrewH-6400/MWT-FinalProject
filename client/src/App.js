@@ -10,7 +10,7 @@ function App() {
     // State and fetch to pull info from mongo atlas and pass to the pages that need it
     const [items, setItems] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:8000/")
+        fetch("https://mwt-final-project-server.vercel.app/")
             .then((response) => response.json())
             .then((data) => setItems(data))
             .catch((error) => console.error("Error fetching data:", error));

@@ -38,13 +38,16 @@ const AddItem = () => {
         data.append("description", formData.description);
         data.append("userId", userId);
 
-        fetch("http://localhost:8000/nat_hist/add/image", {
-            method: "POST",
-            headers: {
-                Authorization: token,
-            },
-            body: data,
-        })
+        fetch(
+            "https://mwt-final-project-server.vercel.app/nat_hist/add/image",
+            {
+                method: "POST",
+                headers: {
+                    Authorization: token,
+                },
+                body: data,
+            }
+        )
             .then((result) => {
                 console.log(result);
                 if (result.status === 403) {

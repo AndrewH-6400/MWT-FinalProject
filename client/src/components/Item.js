@@ -18,7 +18,7 @@ const Item = () => {
 
     // Fetching the info from the server and then the database
     useEffect(() => {
-        fetch(`http://localhost:8000/nat_hist/${id}`)
+        fetch(`https://mwt-final-project-server.vercel.app/nat_hist/${id}`)
             .then((response) => response.json())
             .then((data) => setItem(data.item))
             .catch((error) =>
@@ -34,7 +34,7 @@ const Item = () => {
         try {
             // Fetch to delete with token
             const response = await fetch(
-                `http://localhost:8000/nat_hist/${id}`,
+                `https://mwt-final-project-server.vercel.app/nat_hist/${id}`,
                 {
                     method: "DELETE",
                     headers: {

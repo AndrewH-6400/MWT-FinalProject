@@ -26,7 +26,7 @@ const EditItem = () => {
         const fetchData = async () => {
             try {
                 const response = await fetch(
-                    `http://localhost:8000/nat_hist/edit/${id}`
+                    `https://mwt-final-project-server.vercel.app/nat_hist/edit/${id}`
                 );
                 const data = await response.json();
 
@@ -71,13 +71,16 @@ const EditItem = () => {
         data.append("title", updatedItem.title);
         data.append("description", updatedItem.description);
 
-        fetch(`http://localhost:8000/nat_hist/edit/${id}`, {
-            method: "POST",
-            headers: {
-                Authorization: token,
-            },
-            body: data,
-        })
+        fetch(
+            `https://mwt-final-project-server.vercel.app/nat_hist/edit/${id}`,
+            {
+                method: "POST",
+                headers: {
+                    Authorization: token,
+                },
+                body: data,
+            }
+        )
             .then((response) => response.json())
             .then((data) => {
                 console.log("Update Successful", data);

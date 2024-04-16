@@ -38,7 +38,7 @@ const RegisterPage = () => {
         // Make a fetch request to the server endpoint for registration
         try {
             const response = await fetch(
-                "http://localhost:8000/user/register",
+                "https://mwt-final-project-server.vercel.app/user/register",
                 {
                     method: "POST",
                     headers: {
