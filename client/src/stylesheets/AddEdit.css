@@ -1,0 +1,25 @@
+.add-item-container {
+    display: flex;
+    margin: 100px;
+    margin-top: 50;
+    flex-direction: column;
+    width: fit-content;
+    width: 20vw;
+}
+#form-group {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* label {
+    text-align: left;
+} */
+input[type="text"] {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: #94a757;
+}
+input[type="text"]:focus {
+    background-color: #bad26c;
+    outline: none;
+}

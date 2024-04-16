@@ -1,0 +1,14 @@
+.index-container {
+    background-color: #fefae0;
+}
+
+.page {
+    background-color: #fefae0;
+    /* display: flex; */
+    height: 100vh;
+    overflow: auto;
+}
+html {
+    overflow: hidden;
+    height: 100%;
+}

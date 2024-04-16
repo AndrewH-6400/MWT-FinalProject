@@ -1,0 +1,27 @@
+.showcase-container {
+    padding-left: 2vw;
+}
+
+.button-footer {
+    background-color: #283618;
+    width: 100vw;
+    height: 8vh;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+}
+.button-footer a {
+    text-decoration: none;
+    color: #bc6c25;
+    font-size: 23px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.button-footer a:hover {
+    color: #dda15e;
+}

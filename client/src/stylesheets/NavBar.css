@@ -1,0 +1,33 @@
+nav {
+    background-color: #283618;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 20px;
+}
+.nav-item {
+    flex: initial;
+    margin-left: 15px;
+}
+
+.nav-logout {
+    margin-left: auto;
+}
+button {
+    background: none;
+    border: none;
+    font-size: 23px;
+    color: #bc6c25;
+}
+button:hover {
+    color: #dda15e;
+}
+
+.link {
+    text-decoration: none;
+    color: #bc6c25;
+    font-size: 23px;
+}
+.link:hover {
+    color: #dda15e;
+}
