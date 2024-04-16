@@ -9,7 +9,7 @@
     "rewrites": [
         {
             "source": "/(.*)",
-            "destination": "/inde.js"
+            "destination": "/api/index.js"
         }
     ]
 }
