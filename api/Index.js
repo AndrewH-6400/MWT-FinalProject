@@ -27,7 +27,7 @@ app.use(cors());
 app.use("/nat_hist", nat_hist_routes);
 app.use("/user", user_routes);
 
-// Initialize session new
+// Initialize session
 app.use(
     session({
         secret: "secret",
