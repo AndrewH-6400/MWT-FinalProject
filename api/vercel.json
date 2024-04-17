@@ -11,11 +11,5 @@
             "source": "/(.*)",
             "destination": "/index.js"
         }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/"
-        }
     ]
 }
