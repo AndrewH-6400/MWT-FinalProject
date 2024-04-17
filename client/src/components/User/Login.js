@@ -10,16 +10,13 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(
-                "https://mwt-final-project-server.vercel.app/user/login",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({ email, password }),
-                }
-            );
+            const response = await fetch("http://localhost:8000/user/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ email, password }),
+            });
             if (!response.ok) {
                 const errorData = await response.json();
                 if (errorData.errors) {
