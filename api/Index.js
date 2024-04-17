@@ -1,12 +1,12 @@
 const express = require("express");
 const cors = require("cors");
-// const Book = require("./models/book");
 const Nat_Hist = require("./models/Natural_History");
+const PORT = process.env.PORT || 8000;
 const nat_hist_routes = require("./router/nat_hist_router");
-const user_routes = require("./router/user_router"); // new
+const user_routes = require("./router/user_router");
 const config = require("./config/db_config");
-const session = require("express-session"); // new
-const passport = require("passport"); // new
+const session = require("express-session");
+const passport = require("passport");
 
 // Adding Mongoose
 const mongoose = require("mongoose");
@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 app.use("/nat_hist", nat_hist_routes);
-app.use("/user", user_routes); // new
+app.use("/user", user_routes);
 
 // Initialize session new
 app.use(
@@ -37,9 +37,9 @@ app.use(
     })
 );
 
-require("./config/passport")(passport); // new
-app.use(passport.initialize()); // new
-app.use(passport.session()); // new
+require("./config/passport")(passport);
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Home page route
 app.get("/", function (req, res) {
@@ -54,7 +54,5 @@ app.get("/", function (req, res) {
             res.status(500).json({ error: "Internal Server Error" });
         });
 });
-
-const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));

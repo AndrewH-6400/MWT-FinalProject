@@ -4,7 +4,7 @@ import { Buffer } from "buffer";
 import NavBar from "./NavBar";
 import "../stylesheets/Base.css";
 import "../stylesheets/Index.css";
-// import '../stylesheets/itemBlock.css';
+
 const Index = ({ title, items }) => {
     // Getting user info and token
     const [userName, setUserName] = useState("");
